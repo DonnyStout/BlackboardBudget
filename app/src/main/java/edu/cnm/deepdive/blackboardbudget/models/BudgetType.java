@@ -1,8 +1,5 @@
 package edu.cnm.deepdive.blackboardbudget.models;
 
-
-public class Budget {
-
-
+public class BudgetType {
 
 }

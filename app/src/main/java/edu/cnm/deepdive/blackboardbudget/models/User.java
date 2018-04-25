@@ -1,6 +1,5 @@
 package edu.cnm.deepdive.blackboardbudget.models;
 
-import static android.arch.persistence.room.ForeignKey.CASCADE;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
@@ -17,9 +16,6 @@ public class User {
   @ColumnInfo(name = "username")
   private String username;
 
-  @ColumnInfo(name = "budget_id")
-  private long budgetId;
-
   public long getUserId() {
     return userId;
   }
@@ -34,13 +30,5 @@ public class User {
 
   public void setUsername(String username) {
     this.username = username;
-  }
-
-  public long getBudgetId() {
-    return budgetId;
-  }
-
-  public void setBudgetId(long budgetId) {
-    this.budgetId = budgetId;
   }
 }
