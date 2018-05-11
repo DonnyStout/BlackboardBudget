@@ -11,5 +11,5 @@ public interface BudgetDao {
   @Query("SELECT * FROM budget WHERE budget_id LIKE :budgetId AND user_id LIKE :userId LIMIT 1")
   Budget findByBudgetAndUserId(long budgetId, long userId);
 
-  
+
 }
