@@ -9,8 +9,8 @@ import org.joda.time.LocalDate;
 @Dao
 public interface TransactionDao {
 
-  @Query("SELECt * FROM `transaction`")
-  List<Transaction> getAll();
+  @Query("SELECT * FROM `transaction` WHERE user_id LIKE :userId")
+  List<Transaction> findAllByUser();
 
   @Query("SELECT * FROM `transaction` WHERE date LIKE :date AND user_id LIKE :userId")
   List<Transaction> findByDateAndUserId(LocalDate date, long userId);
@@ -19,5 +19,5 @@ public interface TransactionDao {
   Transaction findByNameAndUserId(String name, long userId);
 
   @Query("SELECT * FROM `transaction`WHERE transaction_id LIKE :transactionId AND user_id LIKE :userId LIMIT 1")
-  Transaction findById(long tansactionId, long userId);
+  Transaction findById(long transactionId, long userId);
 }
