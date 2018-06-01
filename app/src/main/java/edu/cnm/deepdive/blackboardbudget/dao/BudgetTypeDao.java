@@ -7,7 +7,7 @@ import edu.cnm.deepdive.blackboardbudget.models.BudgetType;
 @Dao
 public interface BudgetTypeDao {
 
-  @Query("SELECT * FROM budgettype WHERE budgettype_id LIKE :budgetTypeID LIMIT 1")
+  @Query("SELECT * FROM budgettype WHERE budgettype_id LIKE :budgetTypeId LIMIT 1")
   BudgetType findByBudgetTypeId(long budgetTypeId);
 
 }

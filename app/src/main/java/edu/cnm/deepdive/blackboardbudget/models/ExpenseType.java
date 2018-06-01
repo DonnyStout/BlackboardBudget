@@ -5,7 +5,7 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
 
-@Entity(foreignKeys = {@ForeignKey(entity = User.class,
+@Entity(foreignKeys = {@ForeignKey(entity = Type.class,
     parentColumns = "type_id",
     childColumns = "type_id"), @ForeignKey(entity = Expense.class,
     parentColumns = "expense_id",
